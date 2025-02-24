@@ -1,3 +1,22 @@
+import {
+  List,
+  Modifiers,
+  SearchInput,
+  SearchProvider,
+  Statuses,
+} from "./components";
+
 export const Search = () => {
-  return <div>TBD</div>;
+  return (
+    <SearchProvider>
+      <h1>Pokemon Search</h1>
+
+      <SearchInput />
+      <Modifiers />
+
+      <Statuses />
+
+      <List />
+    </SearchProvider>
+  );
 };
