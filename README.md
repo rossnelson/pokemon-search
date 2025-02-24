@@ -40,7 +40,7 @@ pnpm run dev
 - **Chaos Mode** - Toggle random delays and errors to test resilience
 - **Pagination** - Automatically loads more results when available
 - **Error Handling** - Graceful recovery from API failures
-- **Responsive UI** - Works on mobile and desktop
+- **Responsive UI** - TODO: Works on mobile and desktop
 
 ## Project Structure
 
