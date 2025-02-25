@@ -1,12 +1,17 @@
 import { useSearchContext } from "../context";
 
 export const Statuses = () => {
-  const { error, isFetching } = useSearchContext();
+  const { data, query, error, isFetching } = useSearchContext();
+
+  if (error?.status === 404) return <div>Not Found</div>;
+  if (error) return <div>Error: {error.message}</div>;
+
+  if (isFetching) return <div>Loading...</div>;
 
   return (
     <>
-      {error && <div>Error: {error.message}</div>}
-      {isFetching && <div>Loading...</div>}
+      {query.length == 0 && <div>Search for something...</div>}
+      {query.length > 0 && data.length == 0 && <div>No Results...</div>}
     </>
   );
 };
